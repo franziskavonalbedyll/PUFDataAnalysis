@@ -1,4 +1,5 @@
-from src.puf_data_processor import  PUFDataProcessor
+from src.puf_data_processor import PUFDataProcessor
+
 
 class PUFBitAliasingCalculator(PUFDataProcessor):
     def __init__(self):
@@ -24,7 +25,7 @@ class PUFBitAliasingCalculator(PUFDataProcessor):
         # Iterate over each bit position
         for i in range(n):
             # Count the number of '1's at the current bit position across all responses
-            count_ones = sum(response[i] == '1' for response in responses)
+            count_ones = sum(response[i] == "1" for response in responses)
 
             # Calculate the bit-aliasing percentage for this bit position
             bit_aliasing_percentage = (count_ones / k) * 100

@@ -1,7 +1,6 @@
 import os
 
 
-
 def load_filepaths_from_directory(path):
     # List to store the names of the puf data files in
     txt_files = []

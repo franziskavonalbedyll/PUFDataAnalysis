@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 class PUFDataProcessor:
     @staticmethod
     def hamming_distance(str1, str2):
@@ -13,7 +14,9 @@ class PUFDataProcessor:
 
     def process_multiple_files(self, identifiers):
         """Process multiple files / rows."""
-        print(f"----------------------------- {self.val_name.upper()} -----------------------------")
+        print(
+            f"----------------------------- {self.val_name.upper()} -----------------------------"
+        )
 
         results = {}
         for identifier in identifiers:
@@ -22,7 +25,9 @@ class PUFDataProcessor:
             results[identifier] = result
 
         print("\n")
-        print(f"Overall average: {sum(results.values()) / len(results.items())}")
+        print(
+            f"Overall average: {sum(results.values()) / len(results.items())}"
+        )
         print("\n")
         print("Detailed Results: ")
         self.print_pretty(results)
@@ -34,10 +39,14 @@ class PUFDataProcessor:
             longest_column_length = len(left_column_name)
         else:
             left_column_name = "Filename"
-            longest_column_length = max(len(column) for column in values_dictionary.keys())
+            longest_column_length = max(
+                len(column) for column in values_dictionary.keys()
+            )
 
         # Create the header with proper spacing
-        header_spacing = longest_column_length + 10  # Add some extra space for padding
+        header_spacing = (
+            longest_column_length + 10
+        )  # Add some extra space for padding
         print(f"{left_column_name:<{header_spacing}}{self.val_name}-Value:")
 
         for fname, val in values_dictionary.items():
