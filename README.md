@@ -1,4 +1,5 @@
 # PUF Data Analysis
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 ![puf.png](puf.png)
 
 This repository contains a Python tool for analyzing Physical Unclonable Functions (PUFs). PUFs are a type of security technology that uses the inherent physical variations in hardware to produce unique identifiers and cryptographic keys. This tool provides a small suite for assessing various properties of PUFs, including uniqueness, uniformity, reliability, and bit-aliasing.
